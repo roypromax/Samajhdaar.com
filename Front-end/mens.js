@@ -7,13 +7,13 @@ let products = [
         price : 499
     },
     {
-        image : "https://images.bewakoof.com/t640/men-s-blue-web-slinger-graphic-printed-t-shirt-570100-1673966432-1.jpg",
+        image : "https://images.bewakoof.com/t640/men-s-black-deathnote-ryuk-oversized-t-shirt-568923-1673597452-1.jpg",
         brand : "Samajhdar",
         description : "Men's Blue Web Slinger Graphic Printed T-shirt",
         price : 499
     },
     {
-        image : "https://images.bewakoof.com/t640/men-s-blue-web-slinger-graphic-printed-t-shirt-570100-1673966432-1.jpg",
+        image : "https://images.bewakoof.com/t640/men-s-black-riot-xxxtentican-oversized-t-shirt-568930-1673612996-1.jpg",
         brand : "Samajhdar",
         description : "Men's Blue Web Slinger Graphic Printed T-shirt",
         price : 499
