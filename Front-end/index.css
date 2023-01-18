@@ -1,0 +1,149 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.banner{
+    width: 100%;
+    margin-top: 5PX;
+    
+}
+.banner img{
+    width: 100%;
+}
+#cards{
+    display: flex;
+    width: 90%;
+    margin: auto;
+}
+#cards div{
+    margin: auto;
+    margin-top: 1%;
+    
+}
+#cards img{
+    height: 174px;
+    width: 125px;
+}
+#cards p{
+    font-family:montserrat, sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.05px;
+    text-align: center;
+    margin-top:  19px;
+    margin-bottom: 19px;
+}
+.banner-in-row{
+    display: flex;
+}
+.banner-in-row img{
+    width: 640px;
+    cursor: pointer;
+}
+#P-categories{
+    font-family:montserrat, sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-align: center;
+    margin-top:  19px;
+    margin-bottom: 19px;
+}
+#popular-categ{
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+}
+#popular-categ div{
+    height: 311px;
+    width: 211px;
+}
+#popular-categ img{
+    width: 100%;
+}
+.Biggest{
+    text-align: center;
+    font-family:montserrat, sans-serif;
+    font-size: 16px;
+    line-height: 22px;
+    text-decoration: none;
+    height: 22px;
+
+}
+.gang{
+    width: 100%;
+    text-align: center;
+    font-family:montserrat, sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-top:  19px;
+    margin-bottom: 19px;
+}
+#gangs-favourite{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 7px;
+    margin-top:  19px;
+    margin-bottom: 19px;
+}
+#gangs-favourite div img{
+    width: 100%;
+}
+.CATEGORIES-BAG{
+    width: 100%;
+    text-align: center;
+    font-family:montserrat, sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-top:  19px;
+    margin-bottom: 19px;
+}
+.bag-cards{
+    display: flex;
+    width: 100%;
+}
+.bag-cards div{
+    width: 16%;
+    height: 311.11px;
+    margin: auto;
+}
+.bag-cards img{
+    width: 100%;
+}
+
+/* -----------------------carousel start from here----------------------------------------- */
+.item div{
+    width: 90%;
+    margin: 10px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+.item button{
+    background-color: rgb(249, 88, 174);
+    color: white;
+    border: 1px solid gray;
+    width: 80px;
+    border-radius: 2px;
+}
+.item p{
+    font-size: 12px;
+    line-height: 12px;
+    color: gray;
+    padding-left: 2px;
+}
+.item .biggest{
+    height: 275px;
+    width: 80%;
+}
+.item .price{
+    font-weight: bold;
+    word-spacing: 0px;
+    margin-right: 3px;
+}
+.item del{
+    color: gray;
+    margin-right: 5px;
+}
+.item .discount{
+    color: green;
+}
