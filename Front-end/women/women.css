@@ -117,36 +117,9 @@ nav input[type="submit"] {
     font-family: Bahnschrift;
     font-size: 15px;
 }
-.carousel{
-    background: rgb(148, 45, 45);
-    margin-top:90px;
-    z-index: -1;
-  }
-.carousel-cell {
-    width: 471px;
-    height: 471px;
-    margin-right: 10px;
-    background: #8C8;
-    border-radius: 5px;
-    counter-increment: gallery-cell;
-    z-index: -1;
-  }
-  
+
   /* cell number */
-  .carousel-cell:before {
-    display: none;
-    text-align: center;
-    content: counter(gallery-cell);
-    line-height: 100px;
-    font-size: 80px;
-    color: white;
-    
-  }
-  .flickity-viewport{
-    background-color:white;
-    margin-top:50px;
-    padding-left:10px;
-  }
+ 
   #container{
     width: 100%;
     margin: auto;
@@ -160,14 +133,14 @@ nav input[type="submit"] {
 img{
     width: 100%;
 }
-#top2{
+.top2{
     margin: auto;
     width: 100%;
     display: grid;
     grid-template-columns: repeat(9,1fr);
     justify-content: space-around;
 }
-#top2>img{
+.top2>img{
     width: 10%;
     justify-content: center;
     
@@ -188,4 +161,8 @@ img{
 #mid>div{
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     padding: px;
+}
+.middle{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
 }
