@@ -36,11 +36,12 @@ nav #main>li>a {
     /* border: rgb(236, 13, 252) solid 3px; */
     font-family: Bahnschrift;
     font-size: 15px;
+    margin: auto;
 }
 nav ul li:hover {
     background-color:#fdd835;
     border-radius: 0px;
-    
+
 
 }
 #search input{
@@ -115,4 +116,15 @@ nav input[type="submit"] {
     /* border: rgb(236, 13, 252) solid 3px; */
     font-family: Bahnschrift;
     font-size: 15px;
+    margin: auto;
+}
+#nav2{
+    margin-top: 1px;
+}
+.tex{
+    margin: auto;
+    margin-left: 100px;
+}
+#text{
+    margin-left: 300px;
 }
