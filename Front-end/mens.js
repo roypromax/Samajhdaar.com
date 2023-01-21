@@ -1,62 +1,107 @@
+//fetching data from API
+let promise = fetch("https://agreeable-toad-rugby-shirt.cyclic.app/data");
 
-let products = [
-    {
-        image : "https://images.bewakoof.com/t640/men-s-blue-web-slinger-graphic-printed-t-shirt-570100-1673966432-1.jpg",
-        brand : "Samajhdar",
-        description : "Men's Blue Web Slinger Graphic Printed T-shirt",
-        price : 499,
-        id:1
-    },
-    {
-        image : "https://images.bewakoof.com/t640/men-s-black-deathnote-ryuk-oversized-t-shirt-568923-1673597452-1.jpg",
-        brand : "Samajhdar",
-        description : "Men's Blue Web Slinger Graphic Printed T-shirt",
-        price : 99,
-        id : 2
-    },
-    {
-        image : "https://images.bewakoof.com/t640/men-s-black-riot-xxxtentican-oversized-t-shirt-568930-1673612996-1.jpg",
-        brand : "Samajhdar",
-        description : "Men's Blue Web Slinger Graphic Printed T-shirt",
-        price : 399,
-        id: 3
-    },
-    {
-        image : "https://images.bewakoof.com/t640/men-s-blue-web-slinger-graphic-printed-t-shirt-570100-1673966432-1.jpg",
-        brand : "Samajhdar",
-        description : "Men's Blue Web Slinger Graphic Printed T-shirt",
-        price : 499,
-        id : 4
-    },
-    {
-        image : "https://images.bewakoof.com/t640/men-s-blue-web-slinger-graphic-printed-t-shirt-570100-1673966432-1.jpg",
-        brand : "Samajhdar",
-        description : "Men's Blue Web Slinger Graphic Printed T-shirt",
-        price : 999,
-        id : 5
-    },
-    {
-        image : "https://images.bewakoof.com/t640/men-s-blue-web-slinger-graphic-printed-t-shirt-570100-1673966432-1.jpg",
-        brand : "Samajhdar",
-        description : "Men's Blue Web Slinger Graphic Printed T-shirt",
-        price : 499,
-        id : 6
-    },
-    {
-        image : "https://images.bewakoof.com/t640/men-s-blue-web-slinger-graphic-printed-t-shirt-570100-1673966432-1.jpg",
-        brand : "Samajhdar",
-        description : "Men's Blue Web Slinger Graphic Printed T-shirt",
-        price : 699,
-        id : 7
-    },
-    {
-        image : "https://images.bewakoof.com/t640/men-s-blue-web-slinger-graphic-printed-t-shirt-570100-1673966432-1.jpg",
-        brand : "Samajhdar",
-        description : "Men's Blue Web Slinger Graphic Printed T-shirt",
-        price : 799,
-        id : 8
+promise.then((res)=>{
+    return res.json();
+})
+.then((data)=>{
+    let products = data.filter((ele)=>(ele.categories!=="women's clothing" && ele.categories!=="Girls-shorts"));
+    render(products);
+    cartAddition(products);
+    sortFun(products);
+
+// adding sort functionality
+
+function sortFun(arr){
+let sortBtn = document.getElementById("sort");
+let defaultSort = document.getElementById("defaultSort");
+
+sortBtn.addEventListener("change",()=>{
+    
+
+    let sortedData = [...arr];
+
+    console.log(sortedData);
+    if(sortBtn.value==="low"){
+        defaultSort.innerText = "Remove sort";
+        sortedData.sort((a,b)=>a.price-b.price);
+        render(sortedData);
+        cartAddition(sortedData);
+    }else if(sortBtn.value === "high"){
+        defaultSort.innerText = "Remove sort";
+        sortedData.sort((a,b)=>b.price-a.price);
+        render(sortedData);
+        cartAddition(sortedData);
+    }else{
+        defaultSort.innerText = "Select";
+        render(arr);
+        cartAddition(arr);
     }
-]
+})
+}
+
+
+// adding filter functionality
+
+let checkboxValues = [];
+
+let checkboxes = document.querySelectorAll("input[type='checkbox']");
+
+console.log(checkboxes);
+
+for(let i=0; i<=checkboxes.length-1; i++){
+    checkboxes[i].addEventListener("change",()=>{
+        
+        if(checkboxes[i].checked){
+            checkboxValues.push(checkboxes[i].name);
+
+            let filteredData = products.filter((ele)=>{
+                for(let val of checkboxValues){
+                    if(ele.categories == val){
+                        return ele;
+                    }
+                }
+            })
+
+
+
+            render(filteredData);
+            cartAddition(filteredData);
+            sortFun(filteredData);
+
+            console.log(filteredData);
+            console.log(checkboxValues);
+        }else{
+            if(checkboxValues.includes(checkboxes[i].name)){
+                checkboxValues = checkboxValues.filter((el)=>el!==checkboxes[i].name);
+            }
+
+            let filteredData = products.filter((ele)=>{
+                for(let val of checkboxValues){
+                    if(ele.categories == val){
+                        return ele;
+                    }
+                }
+            })
+
+            filteredData.length == 0 ? render(products) : render(filteredData);
+            filteredData.length == 0 ? cartAddition(products) : cartAddition(filteredData);
+            filteredData.length == 0 ? sortFun(products) : sortFun(filteredData);
+
+            
+
+
+            console.log(filteredData);
+
+            console.log(checkboxValues);
+        }
+    })
+}
+
+
+})
+
+
 
 //the span where total product numbers will be displayed
 let totalDisplay = document.getElementById("total-items");
@@ -75,11 +120,11 @@ function render(arr){
     arr.forEach((ele,i)=>{
         let card = document.createElement("div");
         let image = document.createElement("img");
-        image.setAttribute("src",ele.image);
+        image.setAttribute("src",ele.avatar[0]);
         let desc = document.createElement("div");
         desc.innerHTML = ` 
-        <h3>${ele.brand}</h3>
-        <p>${ele.description}`;
+        <h3>Samajhdar</h3>
+        <p>${ele.name}`;
         let actions = document.createElement("div");
         actions.setAttribute("class","buttons-div")
         actions.innerHTML = `
@@ -102,67 +147,54 @@ function render(arr){
 
 }
 
-//invoking render function on products
-render(products);
-
-// adding sort functionality
-let sortBtn = document.getElementById("sort");
-let defaultSort = document.getElementById("defaultSort");
-
-sortBtn.addEventListener("change",()=>{
+//creating a function to add event listener to cart buttons
+function cartAddition(arr){
+    // adding event listener to add to cart divs
+    let products = arr;
     
-    let sortedData = [...products];
-    if(sortBtn.value==="low"){
-        defaultSort.innerText = "Remove sort";
-        sortedData.sort((a,b)=>a.price-b.price);
-        render(sortedData);
-    }else if(sortBtn.value === "high"){
-        defaultSort.innerText = "Remove sort";
-        sortedData.sort((a,b)=>b.price-a.price);
-        render(sortedData);
-    }else{
-        defaultSort.innerText = "Select";
-        render(products);
-    }
-})
-
-// adding event listener to add to cart divs
-
-let sizeValues = document.querySelectorAll(".size");
-let cartBtns = document.querySelectorAll(".cart");
-
-
-for(let i=0; i<=cartBtns.length-1; i++){
-
-    cartBtns[i].addEventListener("click",()=>{
-        
-        if(sizeValues[i].value === "null"){
-            alert("Please select a size");
-        }else{
-            let cartItems  = JSON.parse(localStorage.getItem("cart")) || [];
-            let obj = {...products[i]};
-            obj.size = sizeValues[i].value;
-            obj.quantity = 1;
-
-            let duplicate = false;
-
-            for(let i=0; i<=cartItems.length-1; i++){
-                if(cartItems[i].id == obj.id){
-                    if(cartItems[i].size == obj.size){
-                        duplicate = true;
-                        break;
-                    }              
+    let sizeValues = document.querySelectorAll(".size");
+    let cartBtns = document.querySelectorAll(".cart");
+    
+    
+    
+    
+    for(let i=0; i<=cartBtns.length-1; i++){
+    
+        cartBtns[i].addEventListener("click",()=>{
+    
+            console.log("Hello");
+            
+            if(sizeValues[i].value === "null"){
+                alert("Please select a size");
+            }else{
+                let cartItems  = JSON.parse(localStorage.getItem("cart")) || [];
+                let obj = {...products[i]};
+                obj.size = sizeValues[i].value;
+                obj.quantity = 1;
+    
+                let duplicate = false;
+    
+                for(let i=0; i<=cartItems.length-1; i++){
+                    if(cartItems[i].id == obj.id){
+                        if(cartItems[i].size == obj.size){
+                            duplicate = true;
+                            break;
+                        }              
+                    }
+                }
+    
+                if(duplicate){
+                    alert("Product is already in cart");
+                }else{
+                    cartItems.push(obj);
+                    localStorage.setItem("cart",JSON.stringify(cartItems));
+                    alert("Product added to cart");
                 }
             }
-
-            if(duplicate){
-                alert("Product is already in cart");
-            }else{
-                cartItems.push(obj);
-                localStorage.setItem("cart",JSON.stringify(cartItems));
-                alert("Product added to cart");
-            }
-        }
-    })
+        })
+    }
 }
+
+
+
 

@@ -74,11 +74,16 @@ a{
 }
 
 #products-container>div{
-    padding: 10px;
+    margin: 5px;
+    padding: 5px;
 }
 
 #products-container>div>div{
     margin-top: 10px;
+}
+
+#products-container>div p{
+    height: 36px;
 }
 
 .buttons-div{
@@ -109,8 +114,10 @@ select{
 
 }
 
+
 #products-container>div>img{
-    width: 100%;
+    width: 273.688px;
+    height:351.938px;
     transition: transform .2s;
 }
 
