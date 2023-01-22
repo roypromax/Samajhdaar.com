@@ -36,11 +36,12 @@ nav #main>li>a {
     /* border: rgb(236, 13, 252) solid 3px; */
     font-family: Bahnschrift;
     font-size: 15px;
+    margin: auto;
 }
 nav ul li:hover {
     background-color:#fdd835;
     border-radius: 0px;
-    
+
 
 }
 #search input{
@@ -115,5 +116,59 @@ nav input[type="submit"] {
     /* border: rgb(236, 13, 252) solid 3px; */
     font-family: Bahnschrift;
     font-size: 15px;
+
+    margin: auto;
 }
---------------------------------------------NAV BAR Ending-----------------------------------------------------------------------
+#nav2{
+    margin-top: 1px;
+}
+.tex{
+    margin: auto;
+    margin-left: 100px;
+}
+#text{
+    margin-left: 300px;
+}
+#main li.dropdown {
+    display: inline-block;
+  }
+  
+  #main .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  #main .dropdown-content .column {
+    float: left;
+    width: 33.33%;
+    padding: 0 10px;
+  }
+  
+  #main .dropdown-content .column h3 {
+    margin: 0;
+  }
+  
+  #main .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+  #main .dropdown-content a:hover {
+    background-color: #ddd;
+  }
+  
+  #main .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  
+  
+  
+  
