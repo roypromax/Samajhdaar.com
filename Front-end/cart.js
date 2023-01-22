@@ -41,31 +41,47 @@ let contaner=document.getElementById("card")
        
        remove.addEventListener("click",()=>{
        
-
+        
+        
         data.splice(index,1)
         localStorage.setItem("cart",JSON.stringify(data))
-        displayProduct(cartdata)
-        total.innerText=""
-        
+        displayProduct(cartItems)
+        MRP.innerText=Number(MRP.innerText)-Number(price.innerText)
+        MRP.innerText=Math.floor(Number(MRP.innerText))
+        subtotal.innerText=MRP.innerText
+        total.innerText=subtotal.innerText
        })
        
        inc.addEventListener("click",()=>{
         
        qty.innerText= Number(qty.innerText)+1
-       
+      // MRP.innerText=Number(MRP.innerText)-Number(price.innerText)
+       MRP.innerText=Number(MRP.innerText)+Number(price.innerText)
+       MRP.innerText=Math.floor(Number(MRP.innerText))
+       //MRP.innerText=Number(MRP.innerText)+Number(price.innerText)
+        subtotal.innerText=MRP.innerText
+        total.innerText=subtotal.innerText
 
        })
        decriment.addEventListener("click",()=>{
         if(Number(qty.innerText)>1){
+         
+
         qty.innerText= Number(qty.innerText)-1
+        MRP.innerText=Number(MRP.innerText)-Number(price.innerText)
+        MRP.innerText=Math.floor(Number(MRP.innerText))
+        subtotal.innerText=MRP.innerText
+        total.innerText=subtotal.innerText
       }
        })
        
        let MRP=document.getElementById("mrp")
-       MRP.innerText= Number(MRP.innerText)+Number(price.innerText)*Number(qty.innerText)
-       let discount=document.getElementById("discounta")
+       MRP.innerText= Number(MRP.innerText)+Number(price.innerText)
+       MRP.innerText=Math.floor(Number(MRP.innerText))
+       
+       
        let subtotal=document.getElementById("subtotal")
-       subtotal.innerText=Number(mrp.innerText)-Number(discount.innerText)
+       subtotal.innerText=Number(MRP.innerText)
        
        total.innerText=subtotal.innerText
        datadiv.append(brand,price,Categorys,size,inc,qty,decriment,remove)
@@ -90,7 +106,10 @@ conti.addEventListener("click",()=>{
 
     let payments=total.innerText
     localStorage.setItem("amount",JSON.stringify(payments))
+    cartItems=[]
+    localStorage.setItem("cart",JSON.stringify(cartItems))
     window.location="index.html"
+    
   }else{
     window.location="user-login.html"
   }
