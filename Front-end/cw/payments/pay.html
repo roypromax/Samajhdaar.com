@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payments</title>
+  <link rel="stylesheet" href="pay.css">
+</head>
+<body>
+  <div id="payment-container">
+    <div id="payment-form">
+      <h1>Payment</h1>
+      <form>
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" required>
+        <br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <br>
+        <label for="address">Address:</label>
+        <textarea id="address" name="address" required></textarea>
+        <br>
+        <label for="payment-method">Payment Method:</label>
+        <select id="payment-method" name="payment-method" required>
+          <option value="card">Card</option>
+          <option value="cash">Cash on delivery</option>
+        </select>
+        <br>
+        <div id="card-details">
+          <label for="card-number">Card Number:</label>
+          <input type="text" id="card-number" name="card-number" pattern="[0-9]{16}" required>
+          <br>
+          <label for="expiration-date">Expiration Date:</label>
+          <input type="month" id="expiration-date" name="expiration-date" required>
+          <br>
+          
+  <label for="cvv">CVV:</label>
+  <input type="text" id="cvv" name="cvv" pattern="[0-9]{3}" required>
+  <br>
+  </div>
+  <label for="amount">Amount:</label>
+  <input type="number" id="amount" name="amount" min="1" step="0.01" required>
+  <br><br>
+  <input type="submit" value="Submit Payment">
+  </form>
+  
+    </div>
+    <div id="order-summary">
+      <h2>Order Summary</h2>
+      <p>Name: <span id="summary-name"></span></p>
+      <p>Email: <span id="summary-email"></span></p>
+      <p>Address: <span id="summary-address"></span></p>
+      <p>Payment Method: <span id="summary-payment-method"></span></p>
+      <div id="summary-card-details">
+        <p>Card Number: <span id="summary-card-number"></span></p>
+        <p>Expiration Date: <span id="summary-expiration-date"></span></p>
+        <p>CVV: <span id="summary-cvv"></span></p>
+      </div>
+      <p>Amount: <span id="summary-amount"></span></p>
+  
+    </div>
+  </div>
+  <script src="pay.js"></script>
+</body>
+</html>
+
+  
