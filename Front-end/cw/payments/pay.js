@@ -45,7 +45,7 @@ document.querySelector("#payment-method").addEventListener("change", function() 
   } else {
   document.querySelector("#summary-card-details").style.display = "none";
   }
-  document.querySelector("#summary-amount").textContent = "$" + amount;
+  document.querySelector("#summary-amount").textContent = "₹"+amount;
   
   // Send form data to server for processing (You should use payment gateway like Stripe, PayPal etc to handle the payment and you will have to follow their documentation to implement it)
   var xhr = new XMLHttpRequest();
