@@ -2,14 +2,16 @@
     display: flex;
     width: 80%;
     margin: 0 auto;
+    margin-top: 110px;
   }
   
   #payment-form {
     width: 60%;
     text-align: center;
-    background-color: #fff3e6; /* Apple Pay yellow color */
+    background-color: #fdd835; /* Apple Pay yellow color */
     padding: 20px;
     border-radius: 8px;
+    font-family: Bahnschrift;
   }
   
   #payment-form input[type="text"], #payment-form input[type="email"], #payment-form input[type="month"], #payment-form input[type="number"], #payment-form textarea {
@@ -18,7 +20,8 @@
     margin: 8px 0;
     box-sizing: border-box;
     border: none;
-    border-bottom: 2px solid #000; /* Black border for input fields */
+    /* font-family: Bahnschrift; */
+    border-bottom: 2px solid rgb(255, 255, 255); /* Black border for input fields */
   }
   
   #payment-form #card-details {
@@ -35,19 +38,20 @@
     margin: 8px 0;
     box-sizing: border-box;
     border: none;
-    border-bottom: 2px solid #000; /* Black border for select field */
+    border-bottom: 2px solid rgb(255, 255, 255); /* Black border for select field */
     background-color: #fff; /* White background for select field */
   }
   
   #payment-form input[type="submit"] {
     width: 30%;
-    background-color: #ffcc00; /* Apple Pay yellow color */
-    color: #000; /* Black text */
+    background-color:#fdd835; /* Apple Pay yellow color */
+    color: rgb(0, 0, 0); /* Black text */
     padding: 14px 20px;
     margin: 8px 0;
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    font-family: Bahnschrift;
   }
   
   #payment-form input[type="submit"]:hover {
@@ -60,6 +64,8 @@
     padding: 20px;
     text-align: left;
     border-radius: 8px;
+    font-family: Bahnschrift;
+ 
   }
   
   #order-summary h2 {
