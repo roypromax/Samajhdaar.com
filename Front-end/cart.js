@@ -1,7 +1,12 @@
+
+
+
+
 let contaner=document.getElementById("card")
  let cartItems=JSON.parse(localStorage.getItem("cart")) || [];
+ let total=document.getElementById("total")
 
- let 
+
     
     
    
@@ -57,11 +62,11 @@ let contaner=document.getElementById("card")
        })
        
        let MRP=document.getElementById("mrp")
-       MRP.innerText= Number(MRP.innerText)+Number(price.innerText)
+       MRP.innerText= Number(MRP.innerText)+Number(price.innerText)*Number(qty.innerText)
        let discount=document.getElementById("discounta")
        let subtotal=document.getElementById("subtotal")
        subtotal.innerText=Number(mrp.innerText)-Number(discount.innerText)
-       let total=document.getElementById("total")
+       
        total.innerText=subtotal.innerText
        datadiv.append(brand,price,Categorys,size,inc,qty,decriment,remove)
        imgdiv.append(image)
@@ -75,4 +80,18 @@ let contaner=document.getElementById("card")
        
       })
     }
+    
+let conti=document.getElementById("conti")
+
+conti.addEventListener("click",()=>{
+  let loginstatus=JSON.parse(localStorage.getItem("login"))
+  if(loginstatus==true){
+
+    let payments=total.innerText
+    localStorage.setItem("amount",JSON.stringify(payments))
+    window.location=""
+  }else{
+    window.location="user-login.html"
+  }
+})
     
