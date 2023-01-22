@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Men's Fashion</title>
+    <link rel="stylesheet" href="mens.css">
+</head>
+<body>
+    <!-- navbar section -->
+    <nav>
+        <img id="logo" src="https://live.staticflickr.com/65535/52636344518_c99d32ec47_h.jpg" alt="logo">
+      <ul id="main">
+        <li><a href="#men">MEN</a></li>
+        <li><a href="#woment">WOMEN</a></li>
+      </ul>
+      <form id="search">
+        <input type="text" placeholder="Search...">
+        <!-- <input type="submit" value="Go"> -->
+      </form>
+      <ul id="login">
+        <li><a href="#login">LOGIN</a></li>
+      </ul>
+
+      <img id="bag1" src="https://img.icons8.com/ios-glyphs/512/hearts.png" alt="logo">
+
+      <img id="bag2" src="https://img.icons8.com/pastel-glyph/512/shopping-bag--v3.png" alt="logo">
+
+      <img id="bag3" src="https://img.icons8.com/color/512/india-circular.png" alt="logo">
+
+    </nav>
+   
+
+
+    <!-- header section -->
+    <div id="header">
+        <div><a href="index.html">Home</a> <span>/ Men Clothing</span></div>
+        <div>
+            
+                <h1>Men Clothing <span id="total-items">(0)</span></h1> 
+                <div></div>
+            
+        </div>
+    </div>
+
+    <!-- products display section -->
+    <div id="main-container">
+        <!-- div containing filter categories -->
+        <div id="filter-container">
+            <div><span>FILTERS</span></div>
+            <div><span>Category</span>
+                <div class = "filter">
+                    <input type="checkbox" name = "T-Shirts">
+                    <label for="T-Shirts">T-Shirts</label>         
+                </div>
+                <div class = "filter">
+                    <input type="checkbox" name = "shorts">
+                    <label for="Shorts">Shorts</label>         
+                </div>
+                <div class = "filter">
+                    <input type="checkbox" name = "Track-Pants">
+                    <label for="Track-Pants">Track-Pants</label>         
+                </div>
+                <div class = "filter">
+                    <input type="checkbox" name = "Jeans">
+                    <label for="Jeans">Jeans</label>         
+                </div>
+
+            </div>
+            <div><span>Sizes</span></div>
+            <div><span>Brand</span></div>
+            <div><span>Color</span></div>
+            <div><span>Design</span></div>
+            <div><span>Fit</span></div>
+            <div><span>Sleeve</span></div>
+            <div><span>Neck</span></div>
+            <div><span>Type</span></div>
+            <div><span>Ratings</span></div>    
+        </div>
+
+        <!-- div containing sort by and products div -->
+        <div id="content">
+
+            <!-- div containing sortby select tag -->
+            <div id="sortby">
+                <span>SORT BY</span>
+                <select name="" id="sort">
+                    <option id = "defaultSort"value="">Select</option>
+                    <option value="low">Price: Low to High</option>
+                    <option value="high">Price: High to Low</option>
+                </select>
+            </div>
+
+            <!-- div where product cards need to be appended-->
+            <div id="products-container">
+
+            </div>
+
+        </div>
+
+    </div>
+</body>
+<script src="mens.js"></script>
+</html>
