@@ -65,6 +65,15 @@
     font-weight: bold;
     font-size: 16px;
 }
+#add-data-button{
+  background-color: #42a2a2;
+  border-radius: 5px;
+  font-family: sans-serif;
+  border: none;
+  font-size: large;
+  color: white;
+  padding: 10px;
+}
 
 #login>input:last-child{
     border: 1px solid #979797;
