@@ -85,11 +85,12 @@ let conti=document.getElementById("conti")
 
 conti.addEventListener("click",()=>{
   let loginstatus=JSON.parse(localStorage.getItem("login"))
+  console.log(loginstatus)
   if(loginstatus==true){
 
     let payments=total.innerText
     localStorage.setItem("amount",JSON.stringify(payments))
-    window.location=""
+    window.location="index.html"
   }else{
     window.location="user-login.html"
   }
