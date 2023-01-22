@@ -1,7 +1,7 @@
 
 .carousel{
     background: rgb(148, 45, 45);
-    margin-top:90px;
+    /* margin-top:10px; */
     z-index: -1;
   }
 .carousel-cell {
@@ -313,3 +313,187 @@ word-spacing: 0px;
 margin-left: 2px;
 }
 /* ------------------------------------------footerEnd----------------------------------- */
+/* nav CSS */
+nav {
+    display: flex;
+    align-items: center;
+    background-color:white;
+    /* border: rgb(0, 251, 255) solid 3px; */
+    width: 100%;
+    /* box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px; */
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+nav #logo {
+    height: 60px;
+    margin-right: 1em;
+    margin-left: 10em;
+    /* border: red solid 3px; */
+
+}
+nav #main {
+    display: flex;
+    list-style: none;
+    margin: 5;
+    padding: 5;
+    /* border: rgb(26, 255, 0) solid 3px; */
+}
+nav #main>li {
+    flex: 1;
+    text-align: center;
+    /* border: rgb(0, 128, 255) solid 3px; */
+    margin-right:20px;
+    
+}
+nav #main>li>a {
+    color: black;
+    display: block;
+    padding: 1em 5;
+    text-decoration: none;
+    /* margin-left: 50px; */
+    /* border: rgb(236, 13, 252) solid 3px; */
+    font-family: Bahnschrift;
+    font-size: 15px;
+    margin: auto;
+}
+nav ul li:hover {
+    background-color:#fdd835;
+    border-radius: 0px;
+
+
+}
+#search input{
+    margin-left: 300px;
+    /* border: rgb(0, 0, 0) solid 1px; */
+    border-radius: 5px;
+    width: 300px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    display: flex;
+    flex-flow: row wrap;
+    font-family: Bahnschrift;
+
+}
+nav form {
+    flex: 1;
+    margin-left: 1em;
+}
+nav input[type="text"] {
+    background-color: #fff;
+    border: none;
+    padding: 0.5em;
+    width: 80%;
+}
+nav input[type="submit"] {
+    background-color: #0091ea;
+    border: none;
+    color: #fff;
+    padding: 0.5em;
+    width: 20%;
+}
+#bag1{
+    width: 25px;
+    height: 25px;
+    margin-left: 10px;
+    margin-right: 0px;
+    position: absolute ; right:230px; top:28px ; 
+}
+#bag2{
+    width: 25px;
+    height: 25px;
+    margin-left: 10px;
+    margin-right: 0px;
+    position: absolute ; right:190px; top:26px ;
+}
+#bag3{
+    width: 40px;
+    height: 40px;
+    margin-left: 10px;
+    margin-right: 0px;
+    position: absolute ; right:130px; top:20px ;
+}
+#login{
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    /* border: rgb(26, 255, 0) solid 3px; */
+    position: absolute ; right:270px; top:33px ;
+}
+#login>li {
+    flex: 1;
+    text-align: center;
+    /* border: rgb(0, 128, 255) solid 3px; */
+    margin-right:0px;
+
+}
+#login>li>a {
+    color: black;
+    display: block;
+    padding: 1em 5;
+    text-decoration: none;
+    /* margin-left: 50px; */
+    /* border: rgb(236, 13, 252) solid 3px; */
+    font-family: Bahnschrift;
+    font-size: 15px;
+
+    margin: auto;
+}
+#nav2{
+    margin-top: 1px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+.tex{
+    margin: auto;
+    margin-left: 100px;
+}
+#text{
+    margin-left: 300px;
+}
+#main li.dropdown {
+    display: inline-block;
+  }
+  
+  #main .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    font-family: Bahnschrift;
+  }
+  
+  #main .dropdown-content .column {
+    float: left;
+    width: 33.33%;
+    padding: 0 10px;
+    font-family: Bahnschrift;
+  }
+  
+  #main .dropdown-content .column h3 {
+    margin: 0;
+    font-family: Bahnschrift;
+  }
+  
+  #main .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    font-family: Bahnschrift;
+  }
+  
+  #main .dropdown-content a:hover {
+    background-color: #ddd;
+    font-family: Bahnschrift;
+  }
+  
+  #main .dropdown:hover .dropdown-content {
+    display: block;
+    font-family: Bahnschrift;
+  }
+   .column h3 a{
+    font-family: Bahnschrift;
+   }
+  
