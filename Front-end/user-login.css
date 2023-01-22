@@ -36,23 +36,50 @@
 
 #login input{
     display:block;
+    
+}
+
+#username{
+    border: 1px solid #979797;
     width: 100%;
     box-sizing: border-box;
     padding: 12px 20px;
     border-radius: 5px;
 }
 
-#login>input:first-child{
-    border: 1px solid #979797;
-    padding: 20px;
-}
-
-#login>input:first-child::placeholder{
+#username::placeholder{
     font-weight: bold;
     font-size: 16px;
 }
 
-#login>input:last-child{  
+#password{
+    border: 1px solid #979797;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px 20px;
+    border-radius: 5px;
+    margin-top:16px;
+}
+
+#password::placeholder{
+    font-weight: bold;
+    font-size: 16px;
+}
+#add-data-button{
+  background-color: #42a2a2;
+  border-radius: 5px;
+  font-family: sans-serif;
+  border: none;
+  font-size: large;
+  color: white;
+  padding: 10px;
+}
+
+#login>input:last-child{
+    border: 1px solid #979797;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 5px;  
     margin-top:16px;
     padding: 16px;
     font-size: 20px;
