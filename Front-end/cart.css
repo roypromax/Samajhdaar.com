@@ -4,17 +4,18 @@ h3{
     word-spacing: 0px;
    }
    #main{
-    width: 100%;
-    
+    width: 70%;
+    margin: auto;
     display: flex;
    }
    #discription{
-    width: 40%;
-    
-    border: 1px solid rgb(173, 186, 173);
+    width: 30%;
+    margin: auto;
+    /* border: 1px solid rgb(173, 186, 173); */
    }
    #product{
     width: 60%;
+    font-family: Bahnschrift;
    
     
    }
@@ -33,6 +34,8 @@ h3{
    padding-top: 7px;
    font-family: Montserrat;
    word-spacing: 0px;
+   /* padding: 20px; */
+   font-family: Bahnschrift;
    }
    #notification img{
     width: 30px;
@@ -55,18 +58,22 @@ h3{
     padding-top: 7px;
     font-family: Montserrat;
     word-spacing: 0px;
+    font-family: Bahnschrift;
     }
     .save2{
     width: 100%;
     border-radius: 5px;
-    border: 1px solid gray;
+    /* border: 1px solid rgb(201, 13, 13); */
     margin-bottom: 10px;
+    background-color: #dfddd2;
     }
     .save2 p{
-        font-family: Montserrat-Regular;
         word-spacing: .5px;
         line-height: 20.16px;
         text-decoration: rgb(45, 45, 45);
+        padding: 10px;
+        font-family: Bahnschrift;
+
 
     }
     #pricesummary{
@@ -78,6 +85,7 @@ h3{
         margin-left: 20px;
         margin-top: 5px;
         padding-top: 5px;
+        font-family: Bahnschrift;
     }
     #item{
         width: 100%;
@@ -97,6 +105,7 @@ h3{
         font-size: 14px;
         color: gray;
         margin-left: 20px;
+        font-family: Bahnschrift;
     }
     #iamt{
         width: 20%;
@@ -109,6 +118,7 @@ h3{
         font-size: 14px;
         color: gray;
         margin-left: 20px;
+        font-family: Bahnschrift;
     }
     #DIV1{
         height: 50px;
@@ -119,6 +129,7 @@ h3{
     #DIV2{
         width: 30%;
         height: 100%;
+        font-family: Bahnschrift;
     }
     #DIV3{
         background-color: #42A2A2;
@@ -126,17 +137,22 @@ h3{
         height: 100%;
         border-radius: 10px;
         color: antiquewhite;
+        text-decoration: none;
+        margin-top: 10px;
     }
     #DIV3 p{
         text-align: center;
         word-spacing: 1px;
         font-family: sans-serif;
+        font-family: Bahnschrift;
 
     }
     .appendproduct{
         display: flex;
         width: 100%;
-        border: 1px solid #b4b3b1;
+        /* border: 1px solid #b4b3b1; */
+        background-color: #dfddd2;
+        border-radius: 5px;
     }
     .dataele{
         width: 70%;
@@ -150,4 +166,19 @@ h3{
     .eleimg img{
         width: 100%;
         height: 100%;
+    }
+    .rvbtn{
+        display: block;
+        margin-top: 6px;
+        padding: 5px;
+        background-color: #42A2A2;
+        border-radius: 10px;
+        color: antiquewhite;
+        text-decoration: none;
+    }
+    #mybag{
+        text-align: center;
+        font-size: 50px;
+        font-family: Bahnschrift;
+        background-color: #FDD835;
     }

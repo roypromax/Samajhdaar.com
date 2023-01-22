@@ -19,7 +19,7 @@ document.querySelector("#payment-method").addEventListener("change", function() 
   var cardNumber = document.querySelector("#card-number").value;
   var expirationDate = document.querySelector("#expiration-date").value;
   var cvv = document.querySelector("#cvv").value;
-  var amount = document.querySelector("#amount").value;
+
   
   // Validate form data
   if (name == "" || email == "" || address == "" || paymentMethod == "" || amount == "") {
@@ -45,31 +45,20 @@ document.querySelector("#payment-method").addEventListener("change", function() 
   } else {
   document.querySelector("#summary-card-details").style.display = "none";
   }
-  document.querySelector("#summary-amount").textContent = "₹"+amount;
-  
-  // Send form data to server for processing (You should use payment gateway like Stripe, PayPal etc to handle the payment and you will have to follow their documentation to implement it)
-  var xhr = new XMLHttpRequest();
-  xhr.open("POST", "https://your-server.com/process-payment", true);
-  xhr.setRequestHeader("Content-Type", "application/json");
-  xhr.send(JSON.stringify({
-  name: name,
-  email: email,
-  address: address,
-  paymentMethod: paymentMethod,
-  cardNumber: cardNumber,
-  expirationDate: expirationDate,
-  cvv: cvv,
-  amount: amount
-  }));
-  
-  xhr.onreadystatechange = function() {
-  if (xhr.readyState === 4 && xhr.status === 200) {
-  var response = JSON.parse(xhr.responseText);
-  if (response.success) { alert("Payment successful!");
-  } else {
-  alert("Payment failed. " + response.error);
-  }
-  }
-  };
+  document.querySelector("#summary-amount").textContent = "₹"+total;
   });
+
+  var amount = document.querySelector("#amount");
+  let total = JSON.parse(localStorage.getItem("amount"))
+  window.addEventListener("load", (event) => {
+    amount.innerText=total;
+  });
+  window.addEventListener("submit", (event) => {
+    event.preventDefault();
+    setTimeout(() => {
+        alert("Payment successful");
+        event.target.submit();
+        window.location="index.html";
+    }, 2000);
+});
   

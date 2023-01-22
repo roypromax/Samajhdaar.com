@@ -24,12 +24,12 @@ let contaner=document.getElementById("card")
         image.setAttribute("src",element.avatar)
         let brand=document.createElement("p")
         brand.innerText=element.name
-        let price=document.createElement("span")
-        price.innerText= element.price
-        let size=document.createElement("span")
+        let price=document.createElement("p")
+        price.innerText= element.price;
+        let size=document.createElement("p")
         size.innerText=element.size
-        let Categorys=document.createElement("p")
-        Categorys.innerText=element.type
+        // let Categorys=document.createElement("p")
+        // Categorys.innerText=element.type
        let inc=document.createElement("button")
        inc.innerText="+"
        let qty=document.createElement("span")
@@ -37,6 +37,7 @@ let contaner=document.getElementById("card")
        let decriment=document.createElement("button")
        decriment.innerText="-"
        let remove=document.createElement("button")
+       remove.setAttribute("class","rvbtn")
        remove.innerText="Remove"
        
        remove.addEventListener("click",()=>{
@@ -84,7 +85,7 @@ let contaner=document.getElementById("card")
        subtotal.innerText=Number(MRP.innerText)
        
        total.innerText=subtotal.innerText
-       datadiv.append(brand,price,Categorys,size,inc,qty,decriment,remove)
+       datadiv.append(brand,price,size,inc,qty,decriment,remove)
        imgdiv.append(image)
 
         card.append(datadiv,imgdiv)
@@ -108,7 +109,7 @@ conti.addEventListener("click",()=>{
     localStorage.setItem("amount",JSON.stringify(payments))
     cartItems=[]
     localStorage.setItem("cart",JSON.stringify(cartItems))
-    window.location="index.html"
+    window.location="pay.html"
     
   }else{
     window.location="user-login.html"
