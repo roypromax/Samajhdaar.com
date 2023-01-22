@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FashionFusion</title>
+    <link rel="stylesheet" type="text/css" href="Admin.css">
+
+</head>
+<body>
+
+    <div id="add-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeAddModal()">&times;</span>
+            <h3>Add Item</h3>
+            <form id="add-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" required><br>
+                <label for="size">Size:</label>
+                <input type="text" id="size" required><br>
+                <label for="price">Price:</label>
+                <input type="text" id="price" required><br>
+                <label for="categories">Categories:</label>
+                <input type="text" id="categories" required><br>
+                <label for="discount">Discount:</label>
+                <input type="text" id="discount" required><br>
+                <label for="avatar">Avatar:</label>
+                <input type="text" id="avatar" required><br>
+                <label for="rate">Rate:</label>
+                <input type="text" id="rate" required><br>
+                <label for="count">Count:</label>
+                <input type="text" id="count" required><br>
+                <input type="submit" value="Submit" onclick="addData()">
+                <!-- <input type="submit" value="edit" onclick="editData()"> -->
+            </form>
+        </div>
+    </div>
+
+<div class="btn">
+    <button id="fetch-data-button" onclick="fetchData()">Total Products</button>
+        <button id="add-data-button" onclick="showAddModal()">Add Product</button>
+        <button id="add-data-button" onclick="window.location ='../Front-end/user-login.html'">Go_to_Webpage</button>
+
+</div>
+
+    <div class="admin-page">
+        <table id="data-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Image</th>
+                    <th>Name</th>
+                    <th>Size</th>
+                    <th>Price</th>
+                    <th>Categories</th>
+                    <th>Discount</th>
+                    <!-- <th>Rating</th> -->
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="data-table-body"></tbody>
+        </table>
+    </div>
+     
+</body>
+
+<script src="Admin.js"></script> 
+<script src="login.html"></script> 
+</html>
