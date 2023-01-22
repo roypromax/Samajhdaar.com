@@ -37,15 +37,16 @@ nav #main>li>a {
     font-family: Bahnschrift;
     font-size: 15px;
 }
-nav ul li a:hover {
-    background-color:grey;
-    border-radius: 5px;
+nav ul li:hover {
+    background-color:#fdd835;
+    border-radius: 0px;
+    
 
 }
 #search input{
     margin-left: 300px;
     /* border: rgb(0, 0, 0) solid 1px; */
-    border-radius: 10px;
+    border-radius: 5px;
     width: 300px;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
     display: flex;
