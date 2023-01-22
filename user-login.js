@@ -17,7 +17,7 @@ function loginFunction(){
     if(myForm.username.value == "" || myForm.password.value == ""){
         alert("Please enter details")
     }else if(myForm.username.value == "admin" && myForm.password.value == "admin"){
-        window.location = "../Backend/fashionfuion/fashionfuion/Admin.html";
+        window.location = "Admin.html";
     }else{
 
         let userArr = JSON.parse(localStorage.getItem("users")) || [];
